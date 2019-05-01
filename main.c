@@ -10,6 +10,9 @@ int main(void)
 {
 	op_sysclk(4);
 	light_up(LED_GREEN);
+	while(1)
+		;
+
 }
 
 /**

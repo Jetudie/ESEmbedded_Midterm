@@ -9,5 +9,9 @@ clock.bin: main.c blink.c startup.c vector_table.s
 flash:
 	st-flash --reset write clock.bin 0x8000000
 
+test:
+	st-util -p 1234 &
+	arm-none-eabi-gdb
+
 clean:
 	rm -f *.o *.elf *.bin
